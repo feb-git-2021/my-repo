@@ -20,16 +20,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'full-stack-app-ng'`, () => {
+  it(`should have as title 'Continuous Integration With TRAVIS CI'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('full-stack-app-ng');
+    expect(app.title).toEqual('Continuous Integration With TRAVIS CI');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('full-stack-app-ng app is running!');
+    expect(compiled.querySelector('.container').textContent)
+    .toContain('Continuous Integration With TRAVIS CI');
   });
 });
