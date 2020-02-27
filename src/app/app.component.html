@@ -3,4 +3,24 @@
 <p>An Angular App...</p>
 <br/>
 <h6>{{test}}</h6>
+<h3>Select Courses</h3>
+<form (ngSubmit)=" submitHandler()">
+    <div *ngFor="let control of subjectsArray.controls; let i=index;">
+<input type="checkbox" [formControl]="control" 
+(change)="getSelectedSubjectValues()"
+ id="checkbox1{{i}}">
+<label for="checkbox1{{i}}">{{subjects[i]}}</label>
+</div>
+<div>
+    <small id="fnHelp" *ngIf="favSubjectError && checkSubControlsTouched()" style="color:red">
+    Choose at least one subject
+    </small>
+</div>
+<div>
+<button type="submit">Submit</button>
+</div>
+</form>
+
+
+
 </div>
