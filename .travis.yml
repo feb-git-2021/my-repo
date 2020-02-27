@@ -1,6 +1,7 @@
 language: node_js
 node_js:
  - "12.14"
+dist: trusty 
 branches:
   only:
     - master
@@ -13,11 +14,11 @@ cache:
   directories:
     - node_modules   
 script:  
-   - ng test --watch=false
-   - ng build --prod 
+    - ng build --prod --base-href https://feb-git-2021.github.io/my-repo/full-stack-app-ng 
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
   keep-history: true  
-  on:            
+  on:
+    branch: master            
