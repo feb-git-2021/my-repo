@@ -13,11 +13,8 @@ cache:
   npm: true
   directories:
     - node_modules   
-script:
-   - ng lint  
-   - ng test --watch=false   
-   - ng build --prod --base-href https://feb-git-2021.github.io/my-repo 
-
+script:  
+    - ng build --prod --base-href https://feb-git-2021.github.io/my-repo/full-stack-app-ng 
 deploy:
   provider: pages
   skip_cleanup: true
