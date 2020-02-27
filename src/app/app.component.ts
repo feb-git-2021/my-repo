@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Continuous Integration With TRAVIS CI';
+  var test ='Wrong usgae of var keyword'
 }
