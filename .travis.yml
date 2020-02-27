@@ -19,6 +19,5 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: ./dist/my-repo
+  keep-history: true  
   on:            
