@@ -12,8 +12,7 @@ cache:
   npm: true
   directories:
     - node_modules   
-script:
-   - ng lint
+script:  
    - ng test --watch=false
    - ng build --prod 
 deploy:
