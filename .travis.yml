@@ -1,24 +1,24 @@
+dist: trusty
+sudo: false
+
 language: node_js
 node_js:
- - "12.14"
-dist: trusty 
-branches:
-  only:
-    - master
+  - '12.14'
+
 addons:
-  chrome: stable
-before_script:
-   - npm install -g @angular/cli
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
 cache:
-  npm: true
   directories:
-    - node_modules   
-script:  
-    - ng build --prod --base-href https://feb-git-2021.github.io/my-repo/full-stack-app-ng 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep-history: true  
-  on:
-    branch: master            
+    - ./node_modules
+
+install:
+  - npm install
+
+script:
+  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+            
