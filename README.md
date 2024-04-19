@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 Making changes and pusing it back to git
+This repo is info about pull request
 
 ## Development server
 
